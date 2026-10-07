@@ -1,0 +1,418 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS - ESTILO EDITORIAL MONOCROMÁTICO + AZUL CLARO
+   ========================================================================== */
+   @import url('https://googleapis.com');
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   
+   :root {
+       --bg-principal: #0a0a0c;     /* Preto profundo editorial */
+       --bg-card: #111113;          /* Preto levemente elevado */
+       --txt-puro: #ffffff;         /* Branco total para contraste máximo */
+       --txt-mutado: #a1a1a8;       /* Cinza elegante para descrições */
+       --borda-fina: rgba(255, 255, 255, 0.08); /* Linhas de grade minimalistas */
+       --azul-claro: #238dbb;       /* Azul claro elétrico / Ciano moderno (Traz o realce) */
+       --font-editorial: 'Plus Jakarta Sans', system-ui, sans-serif;
+   }
+   
+   html {
+       scroll-behavior: smooth;
+       background-color: var(--bg-principal);
+   }
+   
+   body {
+       font-family: var(--font-editorial);
+       color: var(--txt-puro);
+       background-color: var(--bg-principal);
+       line-height: 1.6;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   /* ==========================================================================
+      CABEÇALHO EDITORIAL (HEADER)
+      ========================================================================== */
+   header {
+       width: 100%;
+       max-width: 1100px;
+       padding: 4rem 2rem;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       border-bottom: 1px solid var(--borda-fina);
+   }
+   
+   header .logo h1 {
+       font-size: 2.8rem;
+       font-weight: 700;
+       letter-spacing: -1.5px;
+       text-transform: uppercase;
+       color: var(--txt-puro);
+   }
+   
+   header .logo .tagline {
+       font-size: 0.95rem;
+       font-weight: 400;
+       letter-spacing: 2px;
+       text-transform: uppercase;
+       color: var(--azul-claro); /* Destaca o seu título profissional em azul */
+       margin-top: 0.75rem;
+   }
+   
+   header nav {
+       margin-top: 2.5rem;
+   }
+   
+   header nav ul {
+       list-style: none;
+       display: flex;
+       justify-content: center;
+       gap: 3rem;
+   }
+   
+   header nav ul li a {
+       text-decoration: none;
+       color: var(--txt-mutado);
+       font-size: 0.85rem;
+       font-weight: 500;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       transition: color 0.2s ease;
+   }
+   
+   header nav ul li a:hover {
+       color: var(--azul-claro); /* Menu brilha em azul no hover */
+   }
+   
+   /* ==========================================================================
+      ESTRUTURA DO CONTEÚDO PRINCIPAL (MAIN)
+      ========================================================================== */
+   main {
+       width: 100%;
+       max-width: 1100px;
+       padding: 6rem 2rem;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 8rem;
+   }
+   
+   section {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+   
+   section h2 {
+       font-size: 1.1rem;
+       font-weight: 600;
+       text-transform: uppercase;
+       letter-spacing: 3px;
+       color: var(--txt-puro);
+       margin-bottom: 3.5rem;
+       position: relative;
+   }
+   
+   /* Traço minimalista azul claro abaixo do título */
+   section h2::after {
+       content: '';
+       position: absolute;
+       bottom: -12px;
+       left: 50%;
+       transform: translateX(-50%);
+       width: 24px;
+       height: 2px;
+       background-color: var(--azul-claro);
+   }
+   
+   /* ==========================================================================
+      HERO / PROPOSTA DE VALOR
+      ========================================================================== */
+   .hero {
+       max-width: 850px;
+       padding: 2rem 0;
+   }
+   
+   .hero h2 {
+       font-size: 3.5rem;
+       font-weight: 700;
+       line-height: 1.15;
+       letter-spacing: -2px;
+       text-transform: none;
+       margin-bottom: 2rem;
+   }
+   
+   .hero h2::after {
+       display: none;
+   }
+   
+   .hero p {
+       font-size: 1.25rem;
+       font-weight: 300;
+       color: var(--txt-mutado);
+       max-width: 650px;
+       line-height: 1.7;
+   }
+   
+   /* ==========================================================================
+      SOBRE MIM E COMPETÊNCIAS
+      ========================================================================== */
+   .sobre-conteudo {
+       max-width: 750px;
+   }
+   
+   .sobre-conteudo p {
+       font-size: 1.1rem;
+       font-weight: 400;
+       color: var(--txt-mutado);
+       text-align: center;
+   }
+   
+   .sobre-conteudo h3 {
+       margin-top: 4rem;
+       font-size: 0.9rem;
+       font-weight: 600;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       color: var(--txt-puro);
+   }
+   
+   .sobre-conteudo ul {
+       list-style: none;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 0.75rem;
+       margin-top: 1.5rem;
+   }
+   
+   .sobre-conteudo ul li {
+       background: transparent;
+       border: 1px solid var(--borda-fina);
+       padding: 0.5rem 1.2rem;
+       border-radius: 0px;
+       font-size: 0.85rem;
+       font-weight: 500;
+       color: var(--txt-puro);
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       transition: all 0.2s ease;
+   }
+   
+   .sobre-conteudo ul li:hover {
+       border-color: var(--azul-claro);
+       background-color: var(--azul-claro);
+       color: var(--bg-principal); /* Inverte a cor ficando preto no fundo azul */
+   }
+   
+   /* ==========================================================================
+      PROJETOS REAIS (ESTILO CASE STUDY COM GRayscale INTELLIGENT)
+      ========================================================================== */
+   .aviso-autoria {
+       font-size: 0.85rem;
+       letter-spacing: 1px;
+       text-transform: uppercase;
+       color: var(--txt-mutado);
+       margin-bottom: 1.5rem;
+   }
+   
+   .lista-projetos {
+       width: 100%;
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 5rem;
+   }
+   
+   .projeto-card {
+       background: var(--bg-card);
+       border: 1px solid var(--borda-fina);
+       padding: 4rem 3rem;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transition: border-color 0.3s ease;
+   }
+   
+   .projeto-card:hover {
+       border-color: rgba(56, 189, 248, 0.4); /* Borda do card acende em azul discreto */
+   }
+   
+   .projeto-card h3 {
+       font-size: 1.8rem;
+       font-weight: 600;
+       letter-spacing: -0.5px;
+       margin-bottom: 1rem;
+   }
+   
+   .projeto-card p {
+       color: var(--txt-mutado);
+       font-size: 1rem;
+       margin-bottom: 1.5rem;
+       max-width: 600px;
+   }
+   
+   .projeto-card code {
+       background: var(--bg-principal);
+       padding: 0.3rem 0.6rem;
+       border-radius: 0px;
+       font-size: 0.8rem;
+       font-family: monospace;
+       color: var(--azul-claro); /* Tags de tecnologia em azul */
+       border: 1px solid var(--borda-fina);
+       margin: 0 0.25rem;
+   }
+   
+   .projeto-imagem {
+       margin: 2rem 0;
+       width: 100%;
+       max-width: 700px;
+   }
+   
+   .projeto-imagem img {
+       width: 100%;
+       height: auto;
+       border-radius: 0px;
+       filter: grayscale(100%);
+       border: 1px solid var(--borda-fina);
+       transition: all 0.4s ease;
+   }
+   
+   .projeto-card:hover .projeto-imagem img {
+       filter: grayscale(0%);
+       border-color: var(--azul-claro); /* Borda da foto fica azul */
+   }
+   
+   .legenda-imagem {
+       margin-top: 0.75rem;
+       font-size: 0.8rem !important;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+   }
+   
+   .projeto-links {
+       display: flex;
+       justify-content: center;
+       gap: 3rem;
+       margin-top: 1.5rem;
+   }
+   
+   .projeto-links a {
+       text-decoration: none;
+       font-size: 0.85rem;
+       color: var(--txt-puro);
+       font-weight: 600;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       border-bottom: 1px solid var(--txt-mutado);
+       padding-bottom: 2px;
+       transition: all 0.2s ease;
+   }
+   
+   .projeto-links a:hover {
+       color: var(--azul-claro);
+       border-color: var(--azul-claro); /* Links ativos ganham linha azul */
+   }
+   
+   /* ==========================================================================
+      CONTATO E CURRÍCULO (ESTILO HIGHLIGHT BOTÃO)
+      ========================================================================== */
+   .botoes-contato {
+       margin: 1rem 0 2.5rem 0;
+   }
+   
+   .btn-curriculo {
+       display: inline-block;
+       text-decoration: none;
+       background-color: var(--azul-claro); /* Botão principal todo em azul */
+       color: var(--bg-principal);
+       padding: 1rem 3rem;
+       border-radius: 0px;
+       font-size: 0.85rem;
+       font-weight: 700;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       transition: all 0.2s ease;
+   }
+   
+   .btn-curriculo:hover {
+       background-color: transparent;
+       color: var(--azul-claro);
+       outline: 1px solid var(--azul-claro);
+   }
+   
+   .links-profissionais {
+       list-style: none;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 1rem;
+       font-size: 0.95rem;
+   }
+   
+   .links-profissionais li {
+       color: var(--txt-mutado);
+   }
+   
+   .links-profissionais strong {
+       color: var(--txt-puro);
+       text-transform: uppercase;
+       font-size: 0.85rem;
+       letter-spacing: 1px;
+   }
+   
+   .links-profissionais a {
+       color: var(--azul-claro); /* Links de rede social em azul */
+       text-decoration: none;
+       border-bottom: 1px solid transparent;
+       transition: border-color 0.2s;
+   }
+   
+   .links-profissionais a:hover {
+       border-color: var(--azul-claro);
+   }
+   
+   /* ==========================================================================
+      RODAPÉ (FOOTER)
+      ========================================================================== */
+   footer {
+       width: 100%;
+       max-width: 1100px;
+       padding: 4rem 2rem;
+       margin-top: 6rem;
+       border-top: 1px solid var(--borda-fina);
+       text-align: center;
+       color: var(--txt-mutado);
+       font-size: 0.8rem;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+   }
+   
+   footer p {
+       margin-bottom: 0.5rem;
+   }
+   
+   /* ==========================================================================
+      RESPONSIVIDADE INTELIGENTE
+      ========================================================================== */
+   @media (max-width: 768px) {
+   }
+       header .logo h1 { font-size: 2.2rem; }
+       .hero h2 { font-size: 2.4rem; }
+       
+       header nav ul {
+           flex-direction: column;
+           gap: 1.25rem;
+       }
+       
+       main { padding: 4rem 1rem; gap: 5rem; }
+   
